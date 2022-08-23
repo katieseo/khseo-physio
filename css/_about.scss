@@ -1,0 +1,19 @@
+.about {
+  .bg-img {
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      ),
+      url("../img/jared-rice-02.jpg") center;
+    background-size: cover;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

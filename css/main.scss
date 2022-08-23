@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "config";
+@import "config";
+@import "home";
+@import "menu";
+@import "about";
+@import "services";
+@import "testimonial";
+@import "contact";
+
+body {
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 110%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  color: set-text-color($primary-color);
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+
+  .bg-img {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    animation: bg-fade-In 5s;
+  }
+
+  @keyframes bg-fade-In {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  section {
+    bottom: 4rem;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 4rem;
+
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      height: 100%;
+    }
+  }
+
+  .content {
+    display: inline-block;
+    max-width: 90%;
+    padding: 80px 0;
+    vertical-align: middle;
+  }
+
+  .box {
+    animation: slide-up 1s;
+    text-align: left;
+    max-width: 50rem;
+
+    &.bg {
+      background: rgba($primary-color, 0.5);
+      border-bottom: 3px solid $secondary-color;
+      padding: 30px;
+    }
+  }
+
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.2;
+  }
+
+  h2 {
+    animation: fade-in 2.2s;
+    color: $secondary-color;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+footer {
+  align-items: center;
+  bottom: 0;
+  color: set-text-color($primary-color);
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  text-align: right;
+  width: 100%;
+  z-index: 2;
+
+  .social-icons {
+    a {
+      padding: 0.4rem;
+      @include transition-ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.testimonial {
+  .bg-img {
+    background: linear-gradient(
+        to bottom,
+        rgba($primary-color, 0.7),
+        rgba($primary-color, 0.3)
+      ),
+      url("../img/junseong-lee-01.jpg") center top;
+    background-size: cover;
+  }
+
+  p {
+    background: rgba($primary-color, 0.7);
+    border-bottom: 3px solid $secondary-color;
+    margin-bottom: 2rem;
+    max-width: 35rem;
+    padding: 20px;
+
+    &:nth-child(even) {
+      animation: slide-right 1s;
+      margin-right: 20%;
+    }
+
+    &:nth-child(odd) {
+      animation: slide-left 1s;
+      margin-left: 20%;
+    }
+
+    @keyframes slide-right {
+      0% {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slide-left {
+      0% {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    span {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 2rem;
+    }
+  }
+}

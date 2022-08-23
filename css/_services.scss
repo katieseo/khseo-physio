@@ -1,0 +1,21 @@
+.services {
+  padding-bottom: 2rem;
+
+  .bg-img {
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      ),
+      url("../img/nightingale-home-nurse-01.jpg") center;
+    background-size: cover;
+  }
+
+  .box {
+    max-width: 24rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+}

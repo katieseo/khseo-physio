@@ -1,0 +1,60 @@
+.home {
+  text-align: center;
+
+  .bg-img {
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      ),
+      url("../img/sweetyoga-justine-01.jpg") center top;
+    background-size: cover;
+  }
+
+  h1 {
+    animation: fade-in 2.2s;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &--name {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid set-text-color($primary-color);
+  }
+
+  &--business {
+    color: $secondary-color;
+  }
+
+  h3 {
+    color: $secondary-color;
+    padding: 20px;
+    animation: slide-up 1.2s;
+  }
+
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@include media-lg {
+  .home--name {
+    font-size: 4rem;
+  }
+}
